@@ -1,0 +1,28 @@
+/*BODY*/
+body
+{
+background-color:lightsteelblue;
+font-family: 'Dancing Script', cursive;
+font-family: 'Raleway', sans-serif;
+
+}
+/*ICON*/
+.icon_size{
+    font-size:20px;
+    font-color:black;
+}
+
+/*FOOTER*/
+<style>
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+</style>
+
+

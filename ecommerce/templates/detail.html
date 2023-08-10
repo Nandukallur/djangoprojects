@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container-fluid mt-4" style="margin-bottom:100px;">
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="{{p.image.url}}" height="370px" width="370px">
+</div>
+
+        <div class="col-sm-5">
+            <h3 class="card-title text-center">{{p.name}}</h3>
+    <h4>{{p.price}}</h4>
+            <h4>Product Description</h4>
+            <p style="text-indent:10px;">{{p.description}}</p>
+            {% if user.username != 'admin'  %}
+            {% if p.stock <= 0 %}
+                  <h4>Sorry,out of Stock!</h4>
+            {% else %}
+            <h4><a href="{% url 'cart:add_to_cart' p.id %}" class="btn btn-primary">Add to Cart</a></h4>
+            {% endif %}
+            {% endif %}
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
